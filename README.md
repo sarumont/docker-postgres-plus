@@ -1,4 +1,4 @@
-Docker image with Postgres and pgtap installed.
+Docker image with Postgres, pgtap, and plv8 installed.
 
 # Usage
 
