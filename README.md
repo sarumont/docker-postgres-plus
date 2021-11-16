@@ -23,3 +23,18 @@ To run pgtap tests,
 ```
 docker run -i -t --rm --name pgtap --link pg-docker:db -ePGPASSWORD=p0stgr3s -v <local path to tests>:/test sarumont/postgres-pgtap:latest pg_prove -Upostgres -h db -d <database name> -v /test/<test file>
 ```
+
+## Validating plv8 installation
+
+To validate, and use plv8:
+
+```
+# CREATE EXTENSION plv8;
+CREATE EXTENSION
+
+# select plv8_version();
+ plv8_version 
+--------------
+ 2.3.15
+(1 row)
+```
