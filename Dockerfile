@@ -1,6 +1,6 @@
 # Based on https://github.com/walm/docker-pgtap/blob/master/Dockerfile
 # And on https://github.com/clkao/docker-postgres-plv8
-FROM postgres:13
+FROM postgres:14
 
 ENV PLV8_VERSION=2.3.15 \
     PLV8_SHASUM="8a05f9d609bb79e47b91ebc03ea63b3f7826fa421a0ee8221ee21581d68cb5ba v2.3.15.tar.gz" \
