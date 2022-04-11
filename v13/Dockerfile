@@ -30,7 +30,7 @@ RUN curl -LO http://xrl.us/cpanm \
       && ./cpanm TAP::Parser::SourceHandler::pgTAP
 
 # install pgtap
-RUN git clone git://github.com/theory/pgtap.git \
+RUN git clone https://github.com/theory/pgtap.git \
       && cd pgtap \
       && make \
       && make install \
