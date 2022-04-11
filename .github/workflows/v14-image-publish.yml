@@ -17,6 +17,10 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+    
+      - uses: docker/setup-qemu-action@v1
+        with:
+          platforms: amd64,arm64
 
       - name: set up docker buildx
         uses: docker/setup-buildx-action@v1
@@ -30,7 +34,6 @@ jobs:
           
       - name: publish docker image
         uses: docker/build-push-action@v2
-        if: steps.checkImage.outputs.code != 200
         with:
           context: v14
           platforms: linux/amd64,linux/arm64
