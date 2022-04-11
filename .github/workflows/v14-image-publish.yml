@@ -33,6 +33,7 @@ jobs:
         if: steps.checkImage.outputs.code != 200
         with:
           context: v14
+          platforms: linux/amd64,linux/arm64
           file: ./v14/Dockerfile
           push: true
           tags: |
